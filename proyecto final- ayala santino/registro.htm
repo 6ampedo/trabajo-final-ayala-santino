@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="Css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Función para validar el formulario
+        function validateForm() {
+            // Obtener todos los campos del formulario
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            var documento = document.getElementById("documento").value;
+            var tipoDocumento = document.getElementById("tipoDocumento").value;
+            var contacto = document.getElementById("contacto").value;
+
+            // Comprobar si algún campo está vacío
+            if (nombre == "" || apellido == "" || documento == "" || tipoDocumento == "" || contacto == "") {
+                alert("Por favor, rellene todos los campos.");
+                return false; // Evita el envío del formulario
+            }
+            return true; // Permite el envío del formulario
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Barra de inicio (navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- Título centrado -->
+            <div class="d-flex justify-content-center w-100">
+                <div>
+                    <h2 class="mb-0">E.E.S.T.Nº6 CHACABUCO - MORON</h2>
+                    <h1 class="mb-0">Sistema De Registro</h1>
+                </div>
+            </div>
+            <!-- Logo alineado a la derecha -->
+            <a class="navbar-brand ms-auto" href="#">
+                <img src="img/logochaca.png" width="25%" height="30%" alt="Logo">
+            </a>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <center>
+        <form style="border: solid; border-radius: 10px;width: 500px;height: 480px;" action="principal.html" onsubmit="return validateForm()">
+            <br>
+            Nombre: <input type="text" id="nombre" maxlength="10" size="15" placeholder="ingrese su nombre"required/>
+            <br><br>
+            Apellido: <input type="text" id="apellido"maxlength="10" size="15" placeholder="ingrese su apellido" required/>
+            <br><br>
+            Usuario: <input type="text" id="Usuario" maxlength="10" size="15" placeholder="máximo 10 caracteres"required/>
+            <br><br>
+            contraseña: <input type="text" id="contraseña" maxlength="10" size="15" placeholder="máximo 10 caracteres"required/>
+            <br><br>
+            Tipo de documento: 
+            <select name="" id="tipoDocumento" required>
+                <option value="">Seleccione...</option>
+                <option value="dni">DNI</option>
+                <option value="pasaporte">Pasaporte</option>
+                <option value="libreta_civica">Libreta Cívica</option>
+            </select>
+            <br><br>
+            Número de documento: <input type="number" id="documento" maxlength="8" max="99999999" required/>
+            <br><br>
+            Contacto: <input type="text" id="contacto" required/>
+            <br><br>
+            <input type="submit" value="Registrar"/>
+            <input type="reset" value="Borrar"/>
+        </form>
+    </center>
+
+    <!-- Pie de página -->
+    <center>
+        <footer style="margin-top: 5vh;">
+            <hr>
+            Ayala Santino 6°7 || E.E.ST.N°6 - CHACABUCO MORON
+        </footer>
+    </center>
+
+</body>
+</html>

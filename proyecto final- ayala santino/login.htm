@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="Css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Barra de inicio (navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- Título centrado -->
+            <div class="d-flex justify-content-center w-100">
+                <div>
+                    <h2 class="mb-0">E.E.S.T.Nº6 CHACABUCO - MORON</h2>
+                    <h1 class="mb-0">Login Intranet</h1>
+                </div>
+            </div>
+            <!-- Logo alineado a la derecha -->
+            <a class="navbar-brand ms-auto" href="#">
+                <img src="img/logochaca.png" width="25%" height="50%" alt="Logo">
+            </a>
+        </div>
+    </nav>
+<br>
+<br>
+<br>
+<br>
+    <center>
+        <form style="border: solid; border-radius: 10px;width: 600px;height: 200px;" action="principal.html">
+            <br>
+            Usuario: <input type="text" maxlength="10" size="15" placeholder="máximo 10 caracteres" required/>
+            <br><br>     
+            Contraseña: <input type="password" maxlength="10" size="15" placeholder="máximo 10 caracteres" required />
+            <br><br>
+            <input type="submit" value="Ingresar" onclick="principal"/>
+            <input type="reset" value="Borrar"/>
+            <br>
+            Si no está registrado haga click <a href="registro.htm">aquí</a>
+        </form>
+    </center>  
+
+    <center>
+        <footer style="margin-top: 30vh;">
+            <hr>
+            <img src="img/logochaca.png" width="50" height="50" alt="Logo"> <!-- Logo en el pie de página -->
+            <p>Ayala Santino 6°7 | E.E.ST.N°6 - CHACABUCO MORON</p>
+        </footer>
+    </center>
+</body>
+</html>
